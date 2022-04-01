@@ -1,3 +1,6 @@
+//Login é uma Higher order function, pois chama/retorna outras funções dentro dela
+//As demais funções são callback functions, pois são chamadas por outra função
+
 const acesso = (nome) => {
     return `${nome} logou com sucesso no sistema!`
 }
@@ -9,8 +12,8 @@ const autentica = (cargo) => {
     }
     return true;
 }
-  
-const login = (pessoa, autentica) => {
+
+const login = (pessoa, autentica) => { 
     if(pessoa.cargo === `funcionario`) {
         autentica(90000)
     }else if(pessoa.cargo === `diretoria`){
